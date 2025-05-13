@@ -1,0 +1,1499 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /APB_top/apb_intf
+=== Design Unit: work.APB_interface
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        172       172         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /APB_top/apb_intf --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                       PADDR[15-0]           1           1      100.00 
+                                              PCLK           1           1      100.00 
+                                           PENABLE           1           1      100.00 
+                                      PRDATA[31-0]           1           1      100.00 
+                                            PREADY           1           1      100.00 
+                                           PRESETn           1           1      100.00 
+                                             PSELx           1           1      100.00 
+                                      PWDATA[31-0]           1           1      100.00 
+                                            PWRITE           1           1      100.00 
+
+Total Node Count     =         86 
+Toggled Node Count   =         86 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (172 of 172 bins)
+
+=================================================================================
+=== Instance: /APB_top/DUT
+=== Design Unit: work.APB_Wrapper
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        172       172         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /APB_top/DUT --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                       PADDR[0-15]           1           1      100.00 
+                                              PCLK           1           1      100.00 
+                                           PENABLE           1           1      100.00 
+                                      PRDATA[0-31]           1           1      100.00 
+                                            PREADY           1           1      100.00 
+                                           PRESETn           1           1      100.00 
+                                             PSELx           1           1      100.00 
+                                      PWDATA[0-31]           1           1      100.00 
+                                            PWRITE           1           1      100.00 
+
+Total Node Count     =         86 
+Toggled Node Count   =         86 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (172 of 172 bins)
+
+=================================================================================
+=== Instance: /APB_top/Test
+=== Design Unit: work.APB_Wrapper_tb
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      10        10         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/APB_top/Test/drive_apb_transaction/immed__132
+                     APB_Wrapper_tb.sv(132)             0          1
+/APB_top/Test/drive_apb_transaction/immed__99
+                     APB_Wrapper_tb.sv(99)              0          1
+/APB_top/Test/drive_apb_transaction/immed__45
+                     APB_Wrapper_tb.sv(45)              0          1
+/APB_top/Test/drive_apb_transaction/immed__25
+                     APB_Wrapper_tb.sv(25)              0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#76/immed__77
+                     APB_Wrapper_tb.sv(77)              0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#168/immed__224
+                     APB_Wrapper_tb.sv(224)             0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#168/immed__171
+                     APB_Wrapper_tb.sv(171)             0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#168/#ublk#65579586#202/immed__203
+                     APB_Wrapper_tb.sv(203)             0          1
+/APB_top/Test/#ublk#65579586#268/immed__269
+                     APB_Wrapper_tb.sv(269)             0          1
+/APB_top/Test/#ublk#65579586#283/immed__284
+                     APB_Wrapper_tb.sv(284)             0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        48        31        17    64.58%
+
+================================Branch Details================================
+
+Branch Coverage for instance /APB_top/Test
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_Wrapper_tb.sv
+------------------------------------IF Branch------------------------------------
+    40                                      1500     Count coming in to IF
+    40              1                         11         if (!seq.PRESETn && ~seq.PSELx) begin
+                                            1489     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    62                                      1489     Count coming in to CASE
+    63              1                       1365             2'b00: address_encoding = 4'b0001; 
+    64              1                         49             2'b01: address_encoding = 4'b0010; 
+    65              1                         38             2'b10: address_encoding = 4'b0100; 
+    66              1                         37             2'b11: address_encoding = 4'b1000; 
+    67              1                    ***0***             default: address_encoding = 4'b0000;
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    71                                      1489     Count coming in to IF
+    71              1                        251         if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+                                            1238     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    84                                      1343     Count coming in to CASE
+    85              1                       1343             2'b00: address_encoding = 4'b0001; 
+    86              1                    ***0***             2'b01: address_encoding = 4'b0010; 
+    87              1                    ***0***             2'b10: address_encoding = 4'b0100; 
+    88              1                    ***0***             2'b11: address_encoding = 4'b1000; 
+    89              1                    ***0***             default: address_encoding = 4'b0000;
+Branch totals: 1 hit of 5 branches = 20.00%
+
+------------------------------------IF Branch------------------------------------
+    93                                      1343     Count coming in to IF
+    93              1                        246         if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+                                            1097     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    118                                     1984     Count coming in to IF
+    118             1                        992             if (apb_intf.PREADY) begin
+                                             992     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    126                                      992     Count coming in to IF
+    126             1                    ***0***         if (!apb_intf.PREADY) begin
+                                             992     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------CASE Branch------------------------------------
+    148                                      992     Count coming in to CASE
+    149             1                        992             2'b00: address_encoding = 4'b0001; 
+    150             1                    ***0***             2'b01: address_encoding = 4'b0010; 
+    151             1                    ***0***             2'b10: address_encoding = 4'b0100; 
+    152             1                    ***0***             2'b11: address_encoding = 4'b1000; 
+    153             1                    ***0***             default: address_encoding = 4'b0000;
+Branch totals: 1 hit of 5 branches = 20.00%
+
+------------------------------------IF Branch------------------------------------
+    157                                      992     Count coming in to IF
+    157             1                         93         if (!seq.PRESETn) begin
+                                             899     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    163                                      899     Count coming in to IF
+    163             1                        101         if (!seq.PSELx) begin
+    168             1                        798         else if (seq.PSELx && correct_slave) begin
+                                         ***0***     All False Count
+Branch totals: 2 hits of 3 branches = 66.66%
+
+------------------------------------CASE Branch------------------------------------
+    189                                      798     Count coming in to CASE
+    190             1                        729                 2'b00: address_encoding = 4'b0001; 
+    191             1                         27                 2'b01: address_encoding = 4'b0010; 
+    192             1                         18                 2'b10: address_encoding = 4'b0100; 
+    193             1                         24                 2'b11: address_encoding = 4'b1000; 
+    194             1                    ***0***                 default: address_encoding = 4'b0000;
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    197                                      798     Count coming in to IF
+    197             1                         69             if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+                                             729     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    210                                      796     Count coming in to CASE
+    211             1                        796                 2'b00: address_encoding = 4'b0001; 
+    212             1                    ***0***                 2'b01: address_encoding = 4'b0010; 
+    213             1                    ***0***                 2'b10: address_encoding = 4'b0100; 
+    214             1                    ***0***                 2'b11: address_encoding = 4'b1000; 
+    215             1                    ***0***                 default: address_encoding = 4'b0000;
+Branch totals: 1 hit of 5 branches = 20.00%
+
+------------------------------------IF Branch------------------------------------
+    218                                      796     Count coming in to IF
+    218             1                        156             if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+                                             640     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    243                                     1146     Count coming in to IF
+    243             1                        573                 if (apb_intf.PREADY) begin
+                                             573     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    251                                      573     Count coming in to IF
+    251             1                    ***0***             if (!apb_intf.PREADY) begin
+                                             573     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      16         9         7    56.25%
+
+================================Condition Details================================
+
+Condition Coverage for instance /APB_top/Test --
+
+  File APB_Wrapper_tb.sv
+----------------Focused Condition View-------------------
+Line       40 Item    1  (~seq.PRESETn && ~seq.PSELx)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  seq.PRESETn         Y
+    seq.PSELx         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  seq.PRESETn_0         ~seq.PSELx                    
+  Row   2:          1  seq.PRESETn_1         -                             
+  Row   3:          1  seq.PSELx_0           ~seq.PRESETn                  
+  Row   4:          1  seq.PSELx_1           ~seq.PRESETn                  
+
+----------------Focused Condition View-------------------
+Line       71 Item    1  (~seq.PSELx || ~correct_slave || ~seq.PRESETn)
+Condition totals: 2 of 3 input terms covered = 66.66%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+      seq.PSELx         N  '_0' not hit             Hit '_0'
+  correct_slave         Y
+    seq.PRESETn         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  seq.PSELx_0           -                             
+  Row   2:          1  seq.PSELx_1           ~(~correct_slave || ~seq.PRESETn)
+  Row   3:          1  correct_slave_0       seq.PSELx                     
+  Row   4:          1  correct_slave_1       (seq.PSELx && seq.PRESETn)    
+  Row   5:          1  seq.PRESETn_0         (seq.PSELx && correct_slave)  
+  Row   6:          1  seq.PRESETn_1         (seq.PSELx && correct_slave)  
+
+----------------Focused Condition View-------------------
+Line       93 Item    1  (~seq.PSELx || ~correct_slave || ~seq.PRESETn)
+Condition totals: 2 of 3 input terms covered = 66.66%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+      seq.PSELx         Y
+  correct_slave         N  '_0' not hit             Hit '_0'
+    seq.PRESETn         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  seq.PSELx_0           -                             
+  Row   2:          1  seq.PSELx_1           ~(~correct_slave || ~seq.PRESETn)
+  Row   3:    ***0***  correct_slave_0       seq.PSELx                     
+  Row   4:          1  correct_slave_1       (seq.PSELx && seq.PRESETn)    
+  Row   5:          1  seq.PRESETn_0         (seq.PSELx && correct_slave)  
+  Row   6:          1  seq.PRESETn_1         (seq.PSELx && correct_slave)  
+
+----------------Focused Condition View-------------------
+Line       168 Item    1  (seq.PSELx && correct_slave)
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+      seq.PSELx         N  '_0' not hit             Hit '_0'
+  correct_slave         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  seq.PSELx_0           -                             
+  Row   2:          1  seq.PSELx_1           correct_slave                 
+  Row   3:    ***0***  correct_slave_0       seq.PSELx                     
+  Row   4:          1  correct_slave_1       seq.PSELx                     
+
+----------------Focused Condition View-------------------
+Line       197 Item    1  (~seq.PSELx || ~correct_slave || ~seq.PRESETn)
+Condition totals: 1 of 3 input terms covered = 33.33%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+      seq.PSELx         N  '_0' not hit             Hit '_0'
+  correct_slave         Y
+    seq.PRESETn         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  seq.PSELx_0           -                             
+  Row   2:          1  seq.PSELx_1           ~(~correct_slave || ~seq.PRESETn)
+  Row   3:          1  correct_slave_0       seq.PSELx                     
+  Row   4:          1  correct_slave_1       (seq.PSELx && seq.PRESETn)    
+  Row   5:    ***0***  seq.PRESETn_0         (seq.PSELx && correct_slave)  
+  Row   6:          1  seq.PRESETn_1         (seq.PSELx && correct_slave)  
+
+----------------Focused Condition View-------------------
+Line       218 Item    1  (~seq.PSELx || ~correct_slave || ~seq.PRESETn)
+Condition totals: 2 of 3 input terms covered = 66.66%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+      seq.PSELx         Y
+  correct_slave         N  '_0' not hit             Hit '_0'
+    seq.PRESETn         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  seq.PSELx_0           -                             
+  Row   2:          1  seq.PSELx_1           ~(~correct_slave || ~seq.PRESETn)
+  Row   3:    ***0***  correct_slave_0       seq.PSELx                     
+  Row   4:          1  correct_slave_1       (seq.PSELx && seq.PRESETn)    
+  Row   5:          1  seq.PRESETn_0         (seq.PSELx && correct_slave)  
+  Row   6:          1  seq.PRESETn_1         (seq.PSELx && correct_slave)  
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     10         5         5    50.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /APB_top/Test --
+
+  File APB_Wrapper_tb.sv
+----------------Focused Expression View-----------------
+Line       69 Item    1  (seq.PSELx & (1 == address_encoding))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+                seq.PSELx         N  '_0' not hit             Hit '_0'
+  (1 == address_encoding)         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:    ***0***  seq.PSELx_0                (1 == address_encoding)       
+  Row   2:          1  seq.PSELx_1                (1 == address_encoding)       
+  Row   3:          1  (1 == address_encoding)_0  seq.PSELx                     
+  Row   4:          1  (1 == address_encoding)_1  seq.PSELx                     
+
+----------------Focused Expression View-----------------
+Line       91 Item    1  (seq.PSELx & (1 == address_encoding))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+                seq.PSELx         Y
+  (1 == address_encoding)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  seq.PSELx_0                (1 == address_encoding)       
+  Row   2:          1  seq.PSELx_1                (1 == address_encoding)       
+  Row   3:    ***0***  (1 == address_encoding)_0  seq.PSELx                     
+  Row   4:          1  (1 == address_encoding)_1  seq.PSELx                     
+
+----------------Focused Expression View-----------------
+Line       155 Item    1  (seq.PSELx & (1 == address_encoding))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+                seq.PSELx         Y
+  (1 == address_encoding)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  seq.PSELx_0                (1 == address_encoding)       
+  Row   2:          1  seq.PSELx_1                (1 == address_encoding)       
+  Row   3:    ***0***  (1 == address_encoding)_0  seq.PSELx                     
+  Row   4:          1  (1 == address_encoding)_1  seq.PSELx                     
+
+----------------Focused Expression View-----------------
+Line       196 Item    1  (seq.PSELx & (1 == address_encoding))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+                seq.PSELx         N  '_0' not hit             Hit '_0'
+  (1 == address_encoding)         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:    ***0***  seq.PSELx_0                (1 == address_encoding)       
+  Row   2:          1  seq.PSELx_1                (1 == address_encoding)       
+  Row   3:          1  (1 == address_encoding)_0  seq.PSELx                     
+  Row   4:          1  (1 == address_encoding)_1  seq.PSELx                     
+
+----------------Focused Expression View-----------------
+Line       217 Item    1  (seq.PSELx & (1 == address_encoding))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+                seq.PSELx         Y
+  (1 == address_encoding)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  seq.PSELx_0                (1 == address_encoding)       
+  Row   2:          1  seq.PSELx_1                (1 == address_encoding)       
+  Row   3:    ***0***  (1 == address_encoding)_0  seq.PSELx                     
+  Row   4:          1  (1 == address_encoding)_1  seq.PSELx                     
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     159       143        16    89.93%
+
+================================Statement Details================================
+
+Statement Coverage for instance /APB_top/Test --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_Wrapper_tb.sv
+    4                                                module APB_Wrapper_tb (APB_interface.Test apb_intf ) ;
+    5                                                
+    6               1                          1     APB_sequence_item seq = new();
+    7               1                          1     APB_monitor monitor = new();
+    8                                                
+    9                                                
+    10                                               task automatic drive_to_scoreboard();
+    11              1                      11614       seq.PREADY = apb_intf.PREADY;
+    12              1                      11614       seq.PRDATA = apb_intf.PRDATA;
+    13              1                      11614       monitor.monitor(seq);       
+    14                                               endtask
+    15                                               
+    16                                               task automatic drive_apb_transaction(
+    17                                                       bit write,              
+    18                                                       logic [15:0] addr,      
+    19                                                       logic [31:0] data 
+    20                                                   );
+    21                                                   logic [1:0] encoding;
+    22                                                   logic [3:0] address_encoding;
+    23                                                   bit correct_slave;
+    24                                                   //IDLE Phase: PSELx = 0, PENABLE = 0
+    25                                                   assert (seq.randomize() with {
+    26                                                       PENABLE == 0;
+    27                                                       PWRITE == write;
+    28                                                       PADDR == addr;
+    29                                                       PWDATA == data;
+    30                                                   });
+    31              1                       1500         apb_intf.PADDR   = seq.PADDR;
+    32              1                       1500         apb_intf.PWRITE  = seq.PWRITE;
+    33              1                       1500         apb_intf.PWDATA  = seq.PWDATA;
+    34              1                       1500         apb_intf.PSELx   = seq.PSELx;
+    35              1                       1500         apb_intf.PENABLE = seq.PENABLE;
+    36              1                       1500         apb_intf.PRESETn = seq.PRESETn;
+    37              1                       1500         @(posedge apb_intf.PCLK);
+    38              1                       1500         drive_to_scoreboard();
+    39                                               
+    40                                                   if (!seq.PRESETn && ~seq.PSELx) begin
+    41              1                         11             $display("Reset active (PRESETn = 0), staying in IDLE at time %0t", $time); 
+    42              1                         11             return;
+    43                                                   end
+    44                                                   //SETUP phase: PSELx = 1, PENABLE = 0
+    45                                                   assert (seq.randomize() with {
+    46                                                       PENABLE == 0;
+    47                                                       PSELx == 1;
+    48                                                       PWRITE == write;
+    49                                                       PADDR == addr;
+    50                                                       PWDATA == data;
+    51                                                       });
+    52              1                       1489         apb_intf.PADDR   = seq.PADDR;
+    53              1                       1489         apb_intf.PWRITE  = seq.PWRITE;
+    54              1                       1489         apb_intf.PWDATA  = seq.PWDATA;
+    55              1                       1489         apb_intf.PSELx   = seq.PSELx;
+    56              1                       1489         apb_intf.PENABLE = seq.PENABLE;
+    57              1                       1489         apb_intf.PRESETn = seq.PRESETn;
+    58              1                       1489          $display("SETUP: addr=0x%h write=%b", addr, write); 
+    59              1                       1489         @(posedge apb_intf.PCLK);
+    60              1                       1489         drive_to_scoreboard();
+    61              1                       1489         encoding = seq.PADDR[15:14];
+    62                                                   case (encoding)
+    63              1                       1365             2'b00: address_encoding = 4'b0001; 
+    64              1                         49             2'b01: address_encoding = 4'b0010; 
+    65              1                         38             2'b10: address_encoding = 4'b0100; 
+    66              1                         37             2'b11: address_encoding = 4'b1000; 
+    67              1                    ***0***             default: address_encoding = 4'b0000;
+    68                                                   endcase
+    69              1                       1489         correct_slave = seq.PSELx & (4'b0001 == address_encoding);
+    70                                                   //Check if we should return to IDLE
+    71                                                   if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+    72              1                        251             $display("Returning to IDLE due to ~PSELx or incorrect slave at time %0t", $time); 
+    73              1                        251             return;
+    74                                                   end
+    75                                                   //Hold When Enable = 0
+    76              1                       2335         while (~seq.PENABLE) begin
+    77                                                     assert (seq.randomize())
+    78                                                       apb_intf.PSELx   = seq.PSELx;
+    79              1                       1343             apb_intf.PENABLE = seq.PENABLE;
+    80              1                       1343             apb_intf.PRESETn = seq.PRESETn;
+    81              1                       1343             $display("SETUP: addr=0x%h write=%b", addr, write); 
+    82              1                       1343             @(posedge apb_intf.PCLK);
+    83              1                       1343             drive_to_scoreboard();
+    84                                                       case (encoding)
+    85              1                       1343             2'b00: address_encoding = 4'b0001; 
+    86              1                    ***0***             2'b01: address_encoding = 4'b0010; 
+    87              1                    ***0***             2'b10: address_encoding = 4'b0100; 
+    88              1                    ***0***             2'b11: address_encoding = 4'b1000; 
+    89              1                    ***0***             default: address_encoding = 4'b0000;
+    90                                                   endcase
+    91              1                       1343         correct_slave = seq.PSELx & (4'b0001 == address_encoding);
+    92                                                   // Check if we should return to IDLE
+    93                                                   if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+    94              1                        246             $display("Returning to IDLE due to ~PSELx or incorrect slave at time %0t", $time);
+    95              1                        246             return;
+    96                                                   end
+    97                                                   end
+    98                                                   // ENABLE phase: PENABLE = 1
+    99                                                   assert (seq.randomize() with {
+    100                                                      PENABLE == 0;
+    101                                                      PWRITE == write;
+    102                                                      PADDR == addr;
+    103                                                      PWDATA == data;
+    104                                                      PRESETn==1;
+    105                                                      });
+    106             1                        992         apb_intf.PADDR   = seq.PADDR;
+    107             1                        992         apb_intf.PWRITE  = seq.PWRITE;
+    108             1                        992         apb_intf.PWDATA  = seq.PWDATA;
+    109             1                        992         apb_intf.PSELx   = seq.PSELx;
+    110             1                        992         apb_intf.PENABLE = seq.PENABLE;
+    111             1                        992         apb_intf.PRESETn = seq.PRESETn;
+    112             1                        992         $display("ENABLE: addr=0x%h write=%b", addr, write); 
+    113             1                        992         @(posedge apb_intf.PCLK);
+    114             1                        992         drive_to_scoreboard();
+    115                                              
+    116                                                  // READY phase: Wait for PREADY
+    117             1                        992         repeat (10) begin // Timeout after 10 cycles
+    118                                                      if (apb_intf.PREADY) begin
+    119             1                        992                 $display("READY: addr=0x%h write=%b PREADY=%b PRDATA=0x%h",
+    120                                                          addr, write, apb_intf.PREADY, apb_intf.PRDATA); 
+    121             1                        992                 break;
+    122                                                      end
+    123             1                        992             @(posedge apb_intf.PCLK);
+    124             1                        992             drive_to_scoreboard();
+    125                                                  end
+    126                                                  if (!apb_intf.PREADY) begin
+    127             1                    ***0***             $warning("Timeout waiting for PREADY at addr=0x%h write=%b", addr, write); 
+    128                                                  end
+    129             1                        992         @(posedge apb_intf.PCLK);
+    130             1                        992         drive_to_scoreboard();
+    131                                                  // Post-READY transition: Decide next state based on PSELx and correct_slave
+    132                                                  assert (seq.randomize() with {
+    133                                                      PWRITE == 0;
+    134                                                      PWDATA == data;
+    135                                                      PADDR == addr;
+    136                                                      PENABLE == 0;
+    137                                                  });
+    138             1                        992         apb_intf.PADDR   = seq.PADDR;
+    139             1                        992         apb_intf.PWRITE  = seq.PWRITE;
+    140             1                        992         apb_intf.PWDATA  = seq.PWDATA;
+    141             1                        992         apb_intf.PSELx   = seq.PSELx;
+    142             1                        992         apb_intf.PENABLE = seq.PENABLE;
+    143             1                        992         apb_intf.PRESETn = seq.PRESETn;
+    144             1                        992         @(posedge apb_intf.PCLK);
+    145             1                        992         drive_to_scoreboard();
+    146                                              
+    147             1                        992         encoding = seq.PADDR[15:14];
+    148                                                  case (encoding)
+    149             1                        992             2'b00: address_encoding = 4'b0001; 
+    150             1                    ***0***             2'b01: address_encoding = 4'b0010; 
+    151             1                    ***0***             2'b10: address_encoding = 4'b0100; 
+    152             1                    ***0***             2'b11: address_encoding = 4'b1000; 
+    153             1                    ***0***             default: address_encoding = 4'b0000;
+    154                                                  endcase
+    155             1                        992         correct_slave = seq.PSELx & (4'b0001 == address_encoding);
+    156                                              
+    157                                                  if (!seq.PRESETn) begin
+    158             1                         93             $display("Reset active (PRESETn = 0), returning to IDLE at time %0t", $time);  
+    159             1                         93             return;
+    160                                                  end
+    161                                              
+    162                                                  // Transition after READY
+    163                                                  if (!seq.PSELx) begin
+    164             1                        101             $display("PSELx = 0 after READY, returning to IDLE at time %0t", $time); 
+    165                                                      // Drive IDLE state
+    166             1                        101             return;
+    167                                                  end 
+    168                                                  else if (seq.PSELx && correct_slave) begin
+    169             1                        798             $display("PSELx = 1 and correct_slave = 1 after READY, moving to SETUP at time %0t", $time); 
+    170                                                      // Drive SETUP state
+    171                                                      assert (seq.randomize() with {
+    172                                                          PSELx == 1;
+    173                                                          PENABLE == 0;
+    174                                                          PWDATA == data;
+    175                                                          PWRITE == 0;
+    176                                                          PRESETn == 1;
+    177                                                      });
+    178             1                        798             apb_intf.PADDR   = seq.PADDR;
+    179             1                        798             addr             = seq.PADDR;
+    180             1                        798             apb_intf.PWRITE  = seq.PWRITE;
+    181             1                        798             apb_intf.PWDATA  = seq.PWDATA;
+    182             1                        798             apb_intf.PSELx   = seq.PSELx;
+    183             1                        798             apb_intf.PENABLE = seq.PENABLE;
+    184             1                        798             apb_intf.PRESETn = seq.PRESETn;
+    185             1                        798             @(posedge apb_intf.PCLK);
+    186             1                        798             drive_to_scoreboard();
+    187                                                      
+    188             1                        798             encoding = seq.PADDR[15:14];
+    189                                                      case (encoding)
+    190             1                        729                 2'b00: address_encoding = 4'b0001; 
+    191             1                         27                 2'b01: address_encoding = 4'b0010; 
+    192             1                         18                 2'b10: address_encoding = 4'b0100; 
+    193             1                         24                 2'b11: address_encoding = 4'b1000; 
+    194             1                    ***0***                 default: address_encoding = 4'b0000;
+    195                                                      endcase
+    196             1                        798             correct_slave = seq.PSELx & (4'b0001 == address_encoding);
+    197                                                      if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+    198             1                         69                 $display("Returning to IDLE due to ~PSELx or incorrect slave at time %0t", $time); 
+    199             1                         69                 return;
+    200                                                      end
+    201                                                      //Hold when enable =0
+    202             1                       1369             while (~seq.PENABLE) begin
+    203                                                          assert (seq.randomize())
+    204                                                          apb_intf.PSELx   = seq.PSELx;
+    205             1                        796                 apb_intf.PENABLE = seq.PENABLE;
+    206             1                        796                 apb_intf.PRESETn = seq.PRESETn;
+    207             1                        796                 $display("SETUP: addr=0x%h write=%b", addr, write); 
+    208             1                        796                 @(posedge apb_intf.PCLK);
+    209             1                        796                 drive_to_scoreboard();
+    210                                                          case (encoding)
+    211             1                        796                 2'b00: address_encoding = 4'b0001; 
+    212             1                    ***0***                 2'b01: address_encoding = 4'b0010; 
+    213             1                    ***0***                 2'b10: address_encoding = 4'b0100; 
+    214             1                    ***0***                 2'b11: address_encoding = 4'b1000; 
+    215             1                    ***0***                 default: address_encoding = 4'b0000;
+    216                                                      endcase
+    217             1                        796             correct_slave = seq.PSELx & (4'b0001 == address_encoding);
+    218                                                      if (!seq.PSELx || !correct_slave || ~seq.PRESETn) begin
+    219             1                        156                 $display("Returning to IDLE due to ~PSELx or incorrect slave at time %0t", $time); 
+    220             1                        156                 return;
+    221                                                      end
+    222                                                      end
+    223                                                      // ENABLE phase: PSELx = 1, PENABLE = 1
+    224                                                      assert (seq.randomize() with {
+    225                                                          PENABLE == 0;
+    226                                                          PADDR == addr;
+    227                                                          PWDATA == data;
+    228                                                          PRESETn==1;
+    229                                                          PWRITE ==0;
+    230                                                      });
+    231             1                        573             apb_intf.PADDR   = seq.PADDR;
+    232             1                        573             apb_intf.PWRITE  = seq.PWRITE;
+    233             1                        573             apb_intf.PWDATA  = seq.PWDATA;
+    234             1                        573             apb_intf.PSELx   = seq.PSELx;
+    235             1                        573             apb_intf.PENABLE = seq.PENABLE;
+    236             1                        573             apb_intf.PRESETn = seq.PRESETn;
+    237             1                        573             $display("ENABLE: addr=0x%h write=%b", addr, write); 
+    238             1                        573             @(posedge apb_intf.PCLK);
+    239             1                        573             drive_to_scoreboard();
+    240                                              
+    241                                                      // READY phase: Wait for PREADY
+    242             1                        573             repeat (10) begin // Timeout after 10 cycles
+    243                                                          if (apb_intf.PREADY) begin
+    244             1                        573                     $display("READY: addr=0x%h write=%b PREADY=%b PRDATA=0x%h",
+    245                                                                       addr, write, apb_intf.PREADY, apb_intf.PRDATA); 
+    246             1                        573                     break;
+    247                                                          end
+    248             1                        573                 @(posedge apb_intf.PCLK);
+    249             1                        573                 drive_to_scoreboard();
+    250                                                      end
+    251                                                      if (!apb_intf.PREADY) begin
+    252             1                    ***0***                 $warning("Timeout waiting for PREADY at addr=0x%h write=%b", addr, write); 
+    253                                                      end
+    254             1                        573             @(posedge apb_intf.PCLK); // Complete transaction
+    255             1                        573             drive_to_scoreboard();
+    256                                              
+    257                                                  end 
+    258                                                  endtask
+    259                                              
+    260                                              initial begin
+    261             1                          1     apb_intf.PRESETn = 0;
+    262             1                          1     seq.PRESETn = 0;
+    263             1                          1     apb_intf.PSELx = 0;
+    264             1                          1     apb_intf.PENABLE = 0;
+    265             1                          1     apb_intf.PWRITE = 0;
+    266             1                          1     apb_intf.PADDR = 0;
+    267             1                          1     apb_intf.PWDATA = 0;
+    268             1                          5     repeat (5) begin
+    269                                                  assert (seq.randomize());
+    270             1                          5         apb_intf.PRESETn =0;
+    271             1                          5         seq.PRESETn=apb_intf.PRESETn;
+    272             1                          5         @(posedge apb_intf.PCLK);
+    273             1                          5         seq.PREADY = apb_intf.PREADY;
+    274             1                          5         seq.PRDATA = apb_intf.PRDATA;
+    275             1                          5         monitor.monitor(seq);
+    276             1                          5         @(posedge apb_intf.PCLK);
+    277                                              end
+    278                                              
+    279             1                          1     @(posedge apb_intf.PCLK);
+    280             1                          1     drive_to_scoreboard();  // First cycle
+    281                                              
+    282             1                       1500     repeat (1500)
+    283                                              begin
+    284                                                  assert (seq.randomize());
+    285             1                       1500             apb_intf.PADDR   = seq.PADDR;
+    286             1                       1500             apb_intf.PWRITE  = seq.PWRITE;
+    287             1                       1500             apb_intf.PWDATA  = seq.PWDATA;
+    288             1                       1500             apb_intf.PSELx   = seq.PSELx;
+    289             1                       1500             apb_intf.PENABLE = seq.PENABLE;
+    290             1                       1500             apb_intf.PRESETn = seq.PRESETn;
+    291             1                       1500             drive_apb_transaction(seq.PWRITE,seq.PADDR,seq.PWDATA);
+    292                                                
+    293                                              end
+    294                                              
+    295             1                          1     $stop;
+
+
+=================================================================================
+=== Instance: /APB_top
+=== Design Unit: work.APB_top
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       2         2         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /APB_top --
+NOTE: The modification timestamp for source file 'APB_top.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_top.sv
+    1                                                module APB_top ;
+    2                                                bit PCLK ;
+    3               1                      23248     always #5 PCLK=~PCLK;
+    3               2                      23247     
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          2         2         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /APB_top --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                              PCLK           1           1      100.00 
+
+Total Node Count     =          1 
+Toggled Node Count   =          1 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (2 of 2 bins)
+
+=================================================================================
+=== Instance: /APB_coverage_pkg
+=== Design Unit: work.APB_coverage_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          5        na        na        na
+            Covergroup Bins         86        86         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /APB_coverage_pkg/APB_coverage/cg               100.00%        100          -    Covered              
+    covered/total bins:                                    86         86          -                      
+    missing/total bins:                                     0         86          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_reset                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       618          1          -    Covered              
+        bin auto[1]                                     11001          1          -    Covered              
+    Coverpoint cp_Register_Adress                     100.00%        100          -    Covered              
+        covered/total bins:                                16         16          -                      
+        missing/total bins:                                 0         16          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin SYS_STATUS_REG                                660          1          -    Covered              
+        bin INT_CTRL_REG                                  868          1          -    Covered              
+        bin DEV_ID_REG                                    729          1          -    Covered              
+        bin MEM_CTRL_REG                                  572          1          -    Covered              
+        bin TEMP_SENSOR_REG                               651          1          -    Covered              
+        bin ADC_CTRL_REG                                  656          1          -    Covered              
+        bin DBG_CTRL_REG                                  677          1          -    Covered              
+        bin GPIO_DATA_REG                                 617          1          -    Covered              
+        bin DAC_OUTPUT_REG                                618          1          -    Covered              
+        bin VOLTAGE_CTRL_REG                              654          1          -    Covered              
+        bin CLK_CONFIG_REG                                778          1          -    Covered              
+        bin TIMER_COUNT_REG                               585          1          -    Covered              
+        bin INPUT_DATA_REG                                671          1          -    Covered              
+        bin OUTPUT_DATA_REG                               678          1          -    Covered              
+        bin DMA_CTRL_REG                                  707          1          -    Covered              
+        bin SYS_CTRL_REG                                  689          1          -    Covered              
+        default bin others                                809                     -    Occurred             
+    Coverpoint cp_select                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin High                                        10642          1          -    Covered              
+        bin Low                                           977          1          -    Covered              
+    Coverpoint cp_Write_Read                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin High                                         4076          1          -    Covered              
+        bin Low                                          7543          1          -    Covered              
+    Cross #cross__0#                                  100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <SYS_CTRL_REG,Low,Low>                     34          1          -    Covered              
+            bin <DMA_CTRL_REG,Low,Low>                     50          1          -    Covered              
+            bin <OUTPUT_DATA_REG,Low,Low>                  31          1          -    Covered              
+            bin <INPUT_DATA_REG,Low,Low>                   39          1          -    Covered              
+            bin <TIMER_COUNT_REG,Low,Low>                  27          1          -    Covered              
+            bin <CLK_CONFIG_REG,Low,Low>                   23          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,Low,Low>                 40          1          -    Covered              
+            bin <DAC_OUTPUT_REG,Low,Low>                   27          1          -    Covered              
+            bin <GPIO_DATA_REG,Low,Low>                    34          1          -    Covered              
+            bin <DBG_CTRL_REG,Low,Low>                     44          1          -    Covered              
+            bin <ADC_CTRL_REG,Low,Low>                     36          1          -    Covered              
+            bin <TEMP_SENSOR_REG,Low,Low>                  42          1          -    Covered              
+            bin <MEM_CTRL_REG,Low,Low>                     34          1          -    Covered              
+            bin <DEV_ID_REG,Low,Low>                       46          1          -    Covered              
+            bin <INT_CTRL_REG,Low,Low>                     52          1          -    Covered              
+            bin <SYS_STATUS_REG,Low,Low>                   37          1          -    Covered              
+            bin <SYS_CTRL_REG,High,Low>                   395          1          -    Covered              
+            bin <DMA_CTRL_REG,High,Low>                   453          1          -    Covered              
+            bin <OUTPUT_DATA_REG,High,Low>                391          1          -    Covered              
+            bin <INPUT_DATA_REG,High,Low>                 424          1          -    Covered              
+            bin <TIMER_COUNT_REG,High,Low>                378          1          -    Covered              
+            bin <CLK_CONFIG_REG,High,Low>                 441          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,High,Low>               431          1          -    Covered              
+            bin <DAC_OUTPUT_REG,High,Low>                 370          1          -    Covered              
+            bin <GPIO_DATA_REG,High,Low>                  376          1          -    Covered              
+            bin <DBG_CTRL_REG,High,Low>                   377          1          -    Covered              
+            bin <ADC_CTRL_REG,High,Low>                   397          1          -    Covered              
+            bin <TEMP_SENSOR_REG,High,Low>                374          1          -    Covered              
+            bin <MEM_CTRL_REG,High,Low>                   346          1          -    Covered              
+            bin <DEV_ID_REG,High,Low>                     426          1          -    Covered              
+            bin <INT_CTRL_REG,High,Low>                   511          1          -    Covered              
+            bin <SYS_STATUS_REG,High,Low>                 379          1          -    Covered              
+            bin <SYS_CTRL_REG,Low,High>                    14          1          -    Covered              
+            bin <DMA_CTRL_REG,Low,High>                    28          1          -    Covered              
+            bin <OUTPUT_DATA_REG,Low,High>                 27          1          -    Covered              
+            bin <INPUT_DATA_REG,Low,High>                  19          1          -    Covered              
+            bin <TIMER_COUNT_REG,Low,High>                 15          1          -    Covered              
+            bin <CLK_CONFIG_REG,Low,High>                  33          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,Low,High>                17          1          -    Covered              
+            bin <DAC_OUTPUT_REG,Low,High>                  22          1          -    Covered              
+            bin <GPIO_DATA_REG,Low,High>                   18          1          -    Covered              
+            bin <DBG_CTRL_REG,Low,High>                    13          1          -    Covered              
+            bin <ADC_CTRL_REG,Low,High>                    12          1          -    Covered              
+            bin <TEMP_SENSOR_REG,Low,High>                 25          1          -    Covered              
+            bin <MEM_CTRL_REG,Low,High>                    15          1          -    Covered              
+            bin <DEV_ID_REG,Low,High>                      19          1          -    Covered              
+            bin <INT_CTRL_REG,Low,High>                    19          1          -    Covered              
+            bin <SYS_STATUS_REG,Low,High>                  16          1          -    Covered              
+            bin <SYS_CTRL_REG,High,High>                  246          1          -    Covered              
+            bin <DMA_CTRL_REG,High,High>                  176          1          -    Covered              
+            bin <OUTPUT_DATA_REG,High,High>               229          1          -    Covered              
+            bin <INPUT_DATA_REG,High,High>                189          1          -    Covered              
+            bin <TIMER_COUNT_REG,High,High>               165          1          -    Covered              
+            bin <CLK_CONFIG_REG,High,High>                281          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,High,High>              166          1          -    Covered              
+            bin <DAC_OUTPUT_REG,High,High>                199          1          -    Covered              
+            bin <GPIO_DATA_REG,High,High>                 189          1          -    Covered              
+            bin <DBG_CTRL_REG,High,High>                  243          1          -    Covered              
+            bin <ADC_CTRL_REG,High,High>                  211          1          -    Covered              
+            bin <TEMP_SENSOR_REG,High,High>               210          1          -    Covered              
+            bin <MEM_CTRL_REG,High,High>                  177          1          -    Covered              
+            bin <DEV_ID_REG,High,High>                    238          1          -    Covered              
+            bin <INT_CTRL_REG,High,High>                  286          1          -    Covered              
+            bin <SYS_STATUS_REG,High,High>                228          1          -    Covered              
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /APB_coverage_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_coverage.sv
+    2                                                package APB_coverage_pkg ;
+    3                                                import APB_sequence_item_pkg ::*;
+    4                                                
+    5                                                class APB_coverage ;
+    6                                                
+    7               1                          1     APB_sequence_item seq = new();
+    8                                                covergroup cg;
+    9                                                cp_reset: coverpoint seq.PRESETn ;
+    10                                               cp_Register_Adress: coverpoint seq.PADDR 
+    11                                               {
+    12                                                   bins    SYS_STATUS_REG   =      {16'h0000};
+    13                                               	bins	INT_CTRL_REG     =		{16'h0040};
+    14                                               	bins	DEV_ID_REG       =		{16'h0080}; 
+    15                                               	bins	MEM_CTRL_REG     =		{16'h00c0}; 
+    16                                               	bins	TEMP_SENSOR_REG  =		{16'h0100}; 
+    17                                               	bins	ADC_CTRL_REG     =		{16'h0140}; 
+    18                                               	bins	DBG_CTRL_REG     =		{16'h0180}; 
+    19                                               	bins	GPIO_DATA_REG    =		{16'h01c0}; 
+    20                                               	bins	DAC_OUTPUT_REG   =		{16'h0200}; 
+    21                                               	bins	VOLTAGE_CTRL_REG =	    {16'h0240}; 
+    22                                               	bins	CLK_CONFIG_REG   =		{16'h0280}; 
+    23                                               	bins	TIMER_COUNT_REG  =		{16'h02c0}; 
+    24                                               	bins	INPUT_DATA_REG   =		{16'h0300}; 
+    25                                               	bins	OUTPUT_DATA_REG  =		{16'h0340};
+    26                                               	bins	DMA_CTRL_REG     =		{16'h0380};
+    27                                               	bins	SYS_CTRL_REG     =		{16'h03c0};
+    28                                                   bins    others           =      default;
+    29                                               }
+    30                                               cp_select : coverpoint seq.PSELx 
+    31                                               {
+    32                                                   bins High =  {1};
+    33                                                   bins Low  =  {0};
+    34                                               }
+    35                                               
+    36                                               cp_Write_Read: coverpoint seq.PWRITE
+    37                                               {
+    38                                                   bins High =  {1};
+    39                                                   bins Low  =  {0};    
+    40                                               }
+    41                                               
+    42                                               cross cp_Register_Adress,cp_select,cp_Write_Read;
+    43                                               
+    44                                               endgroup :cg
+    45                                               
+    46                                               task sample_data (APB_sequence_item item);
+    47              1                      11619     seq = item ;
+    48              1                      11619     cg.sample();
+    49                                               endtask
+    50                                               
+    51                                               function new() ;
+    52              1                          1     cg=new();    
+
+
+=================================================================================
+=== Instance: /APB_scoreboard_pkg
+=== Design Unit: work.APB_scoreboard_pkg
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        31        27         4    87.09%
+
+================================Branch Details================================
+
+Branch Coverage for instance /APB_scoreboard_pkg
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_scoreboard.sv
+------------------------------------IF Branch------------------------------------
+    50                                     11619     Count coming in to IF
+    50              1                      10642             if (score_sequence.PSELx) begin
+    58              1                        977             end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    51                                     10642     Count coming in to CASE
+    52              1                      10174                     2'b00: address_encoding = 4'b0001; 
+    53              1                        178                     2'b01: address_encoding = 4'b0010; 
+    54              1                        139                     2'b10: address_encoding = 4'b0100; 
+    55              1                        151                     2'b11: address_encoding = 4'b1000; 
+    56              1                    ***0***                     default: address_encoding = 4'b0000;
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    64                                     11619     Count coming in to IF
+    64              1                        618     if (!score_sequence.PRESETn)
+    69              1                      11001     else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    71                                     11001     Count coming in to CASE
+    72              1                       1377         IDLE: begin
+    75              1                       6494         SETUP: begin
+    78              1                       1565         ENABLE: begin
+    81              1                       1565         READY: begin
+                                         ***0***     All False Count
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------CASE Branch------------------------------------
+    88                                     11619     Count coming in to CASE
+    89              1                       1510         IDLE :begin
+    98              1                       6978         SETUP: begin
+    112             1                       1565         ENABLE: begin
+    115             1                       1565         READY: begin
+                                               1     All False Count
+Branch totals: 5 hits of 5 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    90                                      1510     Count coming in to IF
+    90              1                       1102             if (score_sequence.PSELx & correct_slave)
+    94              1                        408             else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    99                                      6978     Count coming in to IF
+    99              1                        365             if (~score_sequence.PSELx & ~correct_slave ) begin
+    102             1                       4868             else if (~score_sequence.PENABLE) begin
+    105             1                       1745             else if (score_sequence.PENABLE) begin
+    108             1                    ***0***             else begin
+Branch totals: 3 hits of 4 branches = 75.00%
+
+------------------------------------IF Branch------------------------------------
+    116                                     1565     Count coming in to IF
+    116             1                       1392             if (score_sequence.PSELx & correct_slave) begin 
+    119             1                        173             else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    126                                    11619     Count coming in to IF
+    126             1                        618         if (!score_sequence.PRESETn)
+    131             1                      11001         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    141                                    11619     Count coming in to IF
+    141             1                      11619     if (score_sequence.PREADY==PREADY_ex && score_sequence.PRDATA===PRDATA_ex)
+    146             1                    ***0***     else
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       8         2         6    25.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /APB_scoreboard_pkg --
+
+  File APB_scoreboard.sv
+----------------Focused Condition View-------------------
+Line       90 Item    1  (this.score_sequence.PSELx & this.correct_slave)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+                 Input Term   Covered  Reason for no coverage   Hint
+                -----------  --------  -----------------------  --------------
+  this.score_sequence.PSELx         N  '_0' not hit             Hit '_0'
+         this.correct_slave         Y
+
+     Rows:       Hits  FEC Target                   Non-masking condition(s)      
+ ---------  ---------  --------------------         -------------------------     
+  Row   1:    ***0***  this.score_sequence.PSELx_0  this.correct_slave            
+  Row   2:          1  this.score_sequence.PSELx_1  this.correct_slave            
+  Row   3:          1  this.correct_slave_0         this.score_sequence.PSELx     
+  Row   4:          1  this.correct_slave_1         this.score_sequence.PSELx     
+
+----------------Focused Condition View-------------------
+Line       99 Item    1  (this.score_sequence.PSELx ~| this.correct_slave)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+                 Input Term   Covered  Reason for no coverage   Hint
+                -----------  --------  -----------------------  --------------
+  this.score_sequence.PSELx         Y
+         this.correct_slave         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                   Non-masking condition(s)      
+ ---------  ---------  --------------------         -------------------------     
+  Row   1:          1  this.score_sequence.PSELx_0  ~this.correct_slave           
+  Row   2:          1  this.score_sequence.PSELx_1  ~this.correct_slave           
+  Row   3:          1  this.correct_slave_0         ~this.score_sequence.PSELx    
+  Row   4:    ***0***  this.correct_slave_1         ~this.score_sequence.PSELx    
+
+----------------Focused Condition View-------------------
+Line       116 Item    1  (this.score_sequence.PSELx & this.correct_slave)
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+                 Input Term   Covered  Reason for no coverage   Hint
+                -----------  --------  -----------------------  --------------
+  this.score_sequence.PSELx         N  '_0' not hit             Hit '_0'
+         this.correct_slave         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                   Non-masking condition(s)      
+ ---------  ---------  --------------------         -------------------------     
+  Row   1:    ***0***  this.score_sequence.PSELx_0  this.correct_slave            
+  Row   2:          1  this.score_sequence.PSELx_1  this.correct_slave            
+  Row   3:    ***0***  this.correct_slave_0         this.score_sequence.PSELx     
+  Row   4:          1  this.correct_slave_1         this.score_sequence.PSELx     
+
+----------------Focused Condition View-------------------
+Line       141 Item    1  ((this.score_sequence.PREADY == this.PREADY_ex) && (this.score_sequence.PRDATA === this.PRDATA_ex))
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+                                       Input Term   Covered  Reason for no coverage   Hint
+                                      -----------  --------  -----------------------  --------------
+   (this.score_sequence.PREADY == this.PREADY_ex)         N  '_0' not hit             Hit '_0'
+  (this.score_sequence.PRDATA === this.PRDATA_ex)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                                         Non-masking condition(s)      
+ ---------  ---------  --------------------                               -------------------------     
+  Row   1:    ***0***  (this.score_sequence.PREADY == this.PREADY_ex)_0   -                             
+  Row   2:          1  (this.score_sequence.PREADY == this.PREADY_ex)_1   (this.score_sequence.PRDATA === this.PRDATA_ex)
+  Row   3:    ***0***  (this.score_sequence.PRDATA === this.PRDATA_ex)_0  (this.score_sequence.PREADY == this.PREADY_ex)
+  Row   4:          1  (this.score_sequence.PRDATA === this.PRDATA_ex)_1  (this.score_sequence.PREADY == this.PREADY_ex)
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      2         1         1    50.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /APB_scoreboard_pkg --
+
+  File APB_scoreboard.sv
+----------------Focused Expression View-----------------
+Line       61 Item    1  (this.score_sequence.PSELx & (1 == this.address_encoding))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+                    Input Term   Covered  Reason for no coverage   Hint
+                   -----------  --------  -----------------------  --------------
+     this.score_sequence.PSELx         N  '_0' not hit             Hit '_0'
+  (1 == this.address_encoding)         Y
+
+     Rows:       Hits  FEC Target                      Non-masking condition(s)      
+ ---------  ---------  --------------------            -------------------------     
+  Row   1:    ***0***  this.score_sequence.PSELx_0     (1 == this.address_encoding)  
+  Row   2:          1  this.score_sequence.PSELx_1     (1 == this.address_encoding)  
+  Row   3:          1  (1 == this.address_encoding)_0  this.score_sequence.PSELx     
+  Row   4:          1  (1 == this.address_encoding)_1  this.score_sequence.PSELx     
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      48        44         4    91.66%
+
+================================Statement Details================================
+
+Statement Coverage for instance /APB_scoreboard_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_scoreboard.sv
+    2                                                package APB_scoreboard_pkg ;
+    3                                                import APB_sequence_item_pkg ::*;
+    4                                                class APB_scoreboard;
+    5                                                parameter ADDR_WIDTH = 16;
+    6                                                parameter DATA_WIDTH = 32;
+    7                                                int right_count,wrong_count;
+    8                                                	typedef enum logic [2:0] {
+    9                                                	IDLE   = 3'b001,
+    10                                               	SETUP  = 3'b011,
+    11                                               	ENABLE = 3'b010,
+    12                                               	READY  = 3'b110} state_e;
+    13                                               
+    14                                                   logic [ADDR_WIDTH-1 : 0]        PADDR_ex    ;
+    15                                                   logic                           PWRITE_ex   ;
+    16                                                   logic [DATA_WIDTH-1 : 0]        PWDATA_ex   ;
+    17                                                   logic                           PENABLE_ex  ;
+    18                                                   logic                           PSELx_ex    ;
+    19                                               
+    20                                                   logic                           PREADY_ex   ;
+    21                                                   logic [DATA_WIDTH-1 : 0]        PRDATA_ex   ;  
+    22                                               
+    23                                               APB_sequence_item score_sequence =new();
+    24                                               state_e CurrentState,NextState;
+    25                                               bit correct_slave;
+    26                                               logic [1:0] encoding;
+    27                                               logic [3:0] address_encoding;
+    28                                               
+    29                                               task display_signals();
+    30              1                      11619       $display("\n---[APB Signal Snapshot @ time = %0t]---", $time);
+    31              1                      11619       $display("Input Sequence:");
+    32              1                      11619       $display("  PRESETn   = %0b", score_sequence.PRESETn);
+    33              1                      11619       $display("  PADDR     = 0x%0h", score_sequence.PADDR);
+    34              1                      11619       $display("  PWRITE    = %0b", score_sequence.PWRITE);
+    35              1                      11619       $display("  PWDATA    = 0x%0h", score_sequence.PWDATA);
+    36              1                      11619       $display("  PENABLE   = %0b", score_sequence.PENABLE);
+    37              1                      11619       $display("  PSELx     = %0b", score_sequence.PSELx);
+    38              1                      11619       $display("  PREADY    = %0b", score_sequence.PREADY);
+    39              1                      11619       $display("  PRDATA    = 0x%0h", score_sequence.PRDATA);
+    40                                                 
+    41              1                      11619       $display("Expected Outputs (Based on FSM):");
+    42              1                      11619       $display("  PREADY_ex = %0b", PREADY_ex);
+    43              1                      11619       $display("  PRDATA_ex = 0x%0h", PRDATA_ex);
+    44              1                      11619       $display("--------------------------------------\n");
+    45                                               endtask
+    46                                               
+    47                                               task referencemodal();
+    48                                               // ADDRESS Decoding
+    49              1                      11619     encoding = score_sequence.PADDR[ADDR_WIDTH-1:ADDR_WIDTH-2];
+    50                                                       if (score_sequence.PSELx) begin
+    51                                                           case (encoding)
+    52              1                      10174                     2'b00: address_encoding = 4'b0001; 
+    53              1                        178                     2'b01: address_encoding = 4'b0010; 
+    54              1                        139                     2'b10: address_encoding = 4'b0100; 
+    55              1                        151                     2'b11: address_encoding = 4'b1000; 
+    56              1                    ***0***                     default: address_encoding = 4'b0000;
+    57                                                           endcase
+    58                                                       end else begin
+    59              1                        977                 address_encoding = 0;
+    60                                                       end
+    61              1                      11619     correct_slave = score_sequence.PSELx & (4'b0001==address_encoding) ; //working on one slave ID=0001
+    62                                               
+    63                                               //output logic 
+    64                                               if (!score_sequence.PRESETn)
+    65                                               begin
+    66              1                        618             PREADY_ex                      =0;
+    67              1                        618             PRDATA_ex                      =0;
+    68                                               end
+    69                                               else
+    70                                               begin
+    71                                                   case(CurrentState)
+    72                                                   IDLE: begin
+    73              1                       1377             PREADY_ex                      =0; 
+    74                                                   end
+    75                                                   SETUP: begin
+    76              1                       6494             PREADY_ex                      =0;
+    77                                                   end
+    78                                                   ENABLE: begin
+    79              1                       1565             PREADY_ex                      =0;
+    80                                                   end
+    81                                                   READY: begin
+    82              1                       1565             PREADY_ex                      =1;
+    83              1                       1565             PRDATA_ex                      =score_sequence.PRDATA;
+    84                                                   end
+    85                                                   endcase
+    86                                               end    
+    87                                               // Next State Logic
+    88                                                   case (CurrentState)
+    89                                                   IDLE :begin
+    90                                                       if (score_sequence.PSELx & correct_slave)
+    91                                                       begin
+    92              1                       1102                 NextState=SETUP;
+    93                                                       end
+    94                                                       else begin
+    95              1                        408                 NextState=IDLE;
+    96                                                       end
+    97                                                   end
+    98                                                   SETUP: begin
+    99                                                       if (~score_sequence.PSELx & ~correct_slave ) begin
+    100             1                        365                 NextState = IDLE;
+    101                                                      end
+    102                                                      else if (~score_sequence.PENABLE) begin
+    103             1                       4868                 NextState=SETUP;
+    104                                                      end
+    105                                                      else if (score_sequence.PENABLE) begin
+    106             1                       1745                 NextState= ENABLE;
+    107                                                      end
+    108                                                      else begin
+    109             1                    ***0***                 NextState=SETUP;
+    110                                                      end
+    111                                                  end 
+    112                                                  ENABLE: begin
+    113             1                       1565                 NextState=READY;
+    114                                                  end
+    115                                                  READY: begin
+    116                                                      if (score_sequence.PSELx & correct_slave) begin 
+    117             1                       1392                 NextState=SETUP;
+    118                                                      end
+    119                                                      else begin
+    120             1                        173                 NextState=IDLE;
+    121                                                      end
+    122                                                  end
+    123                                              
+    124                                                  endcase 
+    125                                              //State Memory
+    126                                                  if (!score_sequence.PRESETn)
+    127                                                  begin
+    128             1                        618             CurrentState = IDLE;
+    129             1                        618             CurrentState = IDLE;
+    130                                                  end
+    131                                                  else
+    132                                                  begin
+    133             1                      11001             CurrentState = NextState;
+    134                                                  end
+    135                                              
+    136                                              endtask
+    137                                              
+    138                                              task scoreboard(APB_sequence_item score_sequence_task);
+    139             1                      11619     score_sequence = score_sequence_task;
+    140             1                      11619     referencemodal();
+    141                                              if (score_sequence.PREADY==PREADY_ex && score_sequence.PRDATA===PRDATA_ex)
+    142                                              begin
+    143             1                      11619         right_count++;
+    144             1                      11619         $display ("Right count = %0d, Wrong count = %0d, time =%0t",right_count,wrong_count,$time);
+    145                                              end
+    146                                              else
+    147                                              begin
+    148             1                    ***0***         wrong_count++;
+    149             1                    ***0***         $display ("Right count = %0d, Wrong count = %0d, time =%0t",right_count,wrong_count,$time);  
+    150                                              end
+    151             1                      11619      display_signals();
+
+
+=================================================================================
+=== Instance: /APB_monitor_pkg
+=== Design Unit: work.APB_monitor_pkg
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       2         2         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /APB_monitor_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File APB_monitor.sv
+    2                                                package APB_monitor_pkg;
+    3                                                import APB_sequence_item_pkg ::*;
+    4                                                import APB_scoreboard_pkg ::*;
+    5                                                import APB_coverage_pkg ::*;
+    6                                                class APB_monitor ;
+    7                                                
+    8                                                APB_scoreboard monitor_scoreboard = new();
+    9                                                APB_coverage   cvr = new();
+    10                                               
+    11                                               task monitor (APB_sequence_item values);
+    12              1                      11619     monitor_scoreboard.scoreboard(values);
+    13              1                      11619     cvr.sample_data(values);
+
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /APB_coverage_pkg/APB_coverage/cg               100.00%        100          -    Covered              
+    covered/total bins:                                    86         86          -                      
+    missing/total bins:                                     0         86          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_reset                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       618          1          -    Covered              
+        bin auto[1]                                     11001          1          -    Covered              
+    Coverpoint cp_Register_Adress                     100.00%        100          -    Covered              
+        covered/total bins:                                16         16          -                      
+        missing/total bins:                                 0         16          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin SYS_STATUS_REG                                660          1          -    Covered              
+        bin INT_CTRL_REG                                  868          1          -    Covered              
+        bin DEV_ID_REG                                    729          1          -    Covered              
+        bin MEM_CTRL_REG                                  572          1          -    Covered              
+        bin TEMP_SENSOR_REG                               651          1          -    Covered              
+        bin ADC_CTRL_REG                                  656          1          -    Covered              
+        bin DBG_CTRL_REG                                  677          1          -    Covered              
+        bin GPIO_DATA_REG                                 617          1          -    Covered              
+        bin DAC_OUTPUT_REG                                618          1          -    Covered              
+        bin VOLTAGE_CTRL_REG                              654          1          -    Covered              
+        bin CLK_CONFIG_REG                                778          1          -    Covered              
+        bin TIMER_COUNT_REG                               585          1          -    Covered              
+        bin INPUT_DATA_REG                                671          1          -    Covered              
+        bin OUTPUT_DATA_REG                               678          1          -    Covered              
+        bin DMA_CTRL_REG                                  707          1          -    Covered              
+        bin SYS_CTRL_REG                                  689          1          -    Covered              
+        default bin others                                809                     -    Occurred             
+    Coverpoint cp_select                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin High                                        10642          1          -    Covered              
+        bin Low                                           977          1          -    Covered              
+    Coverpoint cp_Write_Read                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin High                                         4076          1          -    Covered              
+        bin Low                                          7543          1          -    Covered              
+    Cross #cross__0#                                  100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <SYS_CTRL_REG,Low,Low>                     34          1          -    Covered              
+            bin <DMA_CTRL_REG,Low,Low>                     50          1          -    Covered              
+            bin <OUTPUT_DATA_REG,Low,Low>                  31          1          -    Covered              
+            bin <INPUT_DATA_REG,Low,Low>                   39          1          -    Covered              
+            bin <TIMER_COUNT_REG,Low,Low>                  27          1          -    Covered              
+            bin <CLK_CONFIG_REG,Low,Low>                   23          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,Low,Low>                 40          1          -    Covered              
+            bin <DAC_OUTPUT_REG,Low,Low>                   27          1          -    Covered              
+            bin <GPIO_DATA_REG,Low,Low>                    34          1          -    Covered              
+            bin <DBG_CTRL_REG,Low,Low>                     44          1          -    Covered              
+            bin <ADC_CTRL_REG,Low,Low>                     36          1          -    Covered              
+            bin <TEMP_SENSOR_REG,Low,Low>                  42          1          -    Covered              
+            bin <MEM_CTRL_REG,Low,Low>                     34          1          -    Covered              
+            bin <DEV_ID_REG,Low,Low>                       46          1          -    Covered              
+            bin <INT_CTRL_REG,Low,Low>                     52          1          -    Covered              
+            bin <SYS_STATUS_REG,Low,Low>                   37          1          -    Covered              
+            bin <SYS_CTRL_REG,High,Low>                   395          1          -    Covered              
+            bin <DMA_CTRL_REG,High,Low>                   453          1          -    Covered              
+            bin <OUTPUT_DATA_REG,High,Low>                391          1          -    Covered              
+            bin <INPUT_DATA_REG,High,Low>                 424          1          -    Covered              
+            bin <TIMER_COUNT_REG,High,Low>                378          1          -    Covered              
+            bin <CLK_CONFIG_REG,High,Low>                 441          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,High,Low>               431          1          -    Covered              
+            bin <DAC_OUTPUT_REG,High,Low>                 370          1          -    Covered              
+            bin <GPIO_DATA_REG,High,Low>                  376          1          -    Covered              
+            bin <DBG_CTRL_REG,High,Low>                   377          1          -    Covered              
+            bin <ADC_CTRL_REG,High,Low>                   397          1          -    Covered              
+            bin <TEMP_SENSOR_REG,High,Low>                374          1          -    Covered              
+            bin <MEM_CTRL_REG,High,Low>                   346          1          -    Covered              
+            bin <DEV_ID_REG,High,Low>                     426          1          -    Covered              
+            bin <INT_CTRL_REG,High,Low>                   511          1          -    Covered              
+            bin <SYS_STATUS_REG,High,Low>                 379          1          -    Covered              
+            bin <SYS_CTRL_REG,Low,High>                    14          1          -    Covered              
+            bin <DMA_CTRL_REG,Low,High>                    28          1          -    Covered              
+            bin <OUTPUT_DATA_REG,Low,High>                 27          1          -    Covered              
+            bin <INPUT_DATA_REG,Low,High>                  19          1          -    Covered              
+            bin <TIMER_COUNT_REG,Low,High>                 15          1          -    Covered              
+            bin <CLK_CONFIG_REG,Low,High>                  33          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,Low,High>                17          1          -    Covered              
+            bin <DAC_OUTPUT_REG,Low,High>                  22          1          -    Covered              
+            bin <GPIO_DATA_REG,Low,High>                   18          1          -    Covered              
+            bin <DBG_CTRL_REG,Low,High>                    13          1          -    Covered              
+            bin <ADC_CTRL_REG,Low,High>                    12          1          -    Covered              
+            bin <TEMP_SENSOR_REG,Low,High>                 25          1          -    Covered              
+            bin <MEM_CTRL_REG,Low,High>                    15          1          -    Covered              
+            bin <DEV_ID_REG,Low,High>                      19          1          -    Covered              
+            bin <INT_CTRL_REG,Low,High>                    19          1          -    Covered              
+            bin <SYS_STATUS_REG,Low,High>                  16          1          -    Covered              
+            bin <SYS_CTRL_REG,High,High>                  246          1          -    Covered              
+            bin <DMA_CTRL_REG,High,High>                  176          1          -    Covered              
+            bin <OUTPUT_DATA_REG,High,High>               229          1          -    Covered              
+            bin <INPUT_DATA_REG,High,High>                189          1          -    Covered              
+            bin <TIMER_COUNT_REG,High,High>               165          1          -    Covered              
+            bin <CLK_CONFIG_REG,High,High>                281          1          -    Covered              
+            bin <VOLTAGE_CTRL_REG,High,High>              166          1          -    Covered              
+            bin <DAC_OUTPUT_REG,High,High>                199          1          -    Covered              
+            bin <GPIO_DATA_REG,High,High>                 189          1          -    Covered              
+            bin <DBG_CTRL_REG,High,High>                  243          1          -    Covered              
+            bin <ADC_CTRL_REG,High,High>                  211          1          -    Covered              
+            bin <TEMP_SENSOR_REG,High,High>               210          1          -    Covered              
+            bin <MEM_CTRL_REG,High,High>                  177          1          -    Covered              
+            bin <DEV_ID_REG,High,High>                    238          1          -    Covered              
+            bin <INT_CTRL_REG,High,High>                  286          1          -    Covered              
+            bin <SYS_STATUS_REG,High,High>                228          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/APB_top/Test/drive_apb_transaction/immed__132
+                     APB_Wrapper_tb.sv(132)             0          1
+/APB_top/Test/drive_apb_transaction/immed__99
+                     APB_Wrapper_tb.sv(99)              0          1
+/APB_top/Test/drive_apb_transaction/immed__45
+                     APB_Wrapper_tb.sv(45)              0          1
+/APB_top/Test/drive_apb_transaction/immed__25
+                     APB_Wrapper_tb.sv(25)              0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#76/immed__77
+                     APB_Wrapper_tb.sv(77)              0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#168/immed__224
+                     APB_Wrapper_tb.sv(224)             0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#168/immed__171
+                     APB_Wrapper_tb.sv(171)             0          1
+/APB_top/Test/drive_apb_transaction/#ublk#65579586#168/#ublk#65579586#202/immed__203
+                     APB_Wrapper_tb.sv(203)             0          1
+/APB_top/Test/#ublk#65579586#268/immed__269
+                     APB_Wrapper_tb.sv(269)             0          1
+/APB_top/Test/#ublk#65579586#283/immed__284
+                     APB_Wrapper_tb.sv(284)             0          1
+
+Total Coverage By Instance (filtered view): 79.99%
+
